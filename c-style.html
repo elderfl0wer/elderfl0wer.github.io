@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shreyaan Misra &mdash; C style notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Notes on the C coding style used in Shreyaan Misra's projects.">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="page">
+
+  <p class="byline"><a href="index.html">http://elderfl0wer.me/</a><br>
+  Copyright &copy; 2020&ndash;2026 by Shreyaan Misra</p>
+
+  <hr>
+
+  <h1 class="site-title">Shreyaan Misra</h1>
+  <p class="tagline">wannabe systems programmer</p>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="software.html">Software</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <h2 id="c-style">C style notes</h2>
+
+  <p>
+  These are the conventions I try to follow across my own C
+  projects. They're not a formal standard &mdash; just the habits
+  that keep a codebase readable to me a year later, and to anyone
+  else who has to touch it.
+  <!-- TODO: this is placeholder/example text; edit to match your
+       actual preferences (brace style, indent width, naming, etc). -->
+  </p>
+
+  <h2 id="formatting">Formatting</h2>
+  <ul class="plain">
+    <li>Tabs for indentation, treated as 8 columns wide.</li>
+    <li>Opening brace on the same line for control statements,
+    own line for function definitions &mdash; the classic K&amp;R
+    split most long-lived C codebases converge on.</li>
+    <li>One statement per line; no hidden control flow behind
+    macros where a function would do.</li>
+    <li>Lines wrapped well under 80 columns where practical.</li>
+  </ul>
+
+  <h2 id="naming">Naming</h2>
+  <ul class="plain">
+    <li><code>lower_snake_case</code> for functions and variables.</li>
+    <li><code>UPPER_SNAKE_CASE</code> reserved for preprocessor
+    constants and macros.</li>
+    <li>Names long enough to be unambiguous, short enough to read
+    on one line &mdash; no Hungarian notation.</li>
+  </ul>
+
+  <h2 id="practice">Practice</h2>
+  <ul class="plain">
+    <li>Every allocation has a clear, singular owner and a
+    matching free.</li>
+    <li>Return values are checked; errors are handled at the point
+    they occur, not deferred and forgotten.</li>
+    <li>Headers declare an interface, not implementation details
+    &mdash; keep structs opaque where callers don't need the
+    internals.</li>
+    <li>Compiler warnings are treated as bugs: build with
+    <code>-Wall -Wextra</code> and keep the output clean.</li>
+  </ul>
+
+  <p>
+  For a much more thorough treatment of C style questions, the
+  guides at <a href="https://invisible-island.net/">invisible-island.net</a>
+  are worth reading in full.
+  </p>
+
+  <footer>
+    <p>Last updated: <span class="updated">11 July 2026</span>.</p>
+  </footer>
+
+</div>
+</body>
+</html>

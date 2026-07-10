@@ -1,0 +1,155 @@
+/* ---------------------------------------------------------------
+   style.css
+   Plain, "old web" academic/hacker homepage style, in the vein of
+   invisible-island.net and stroustrup.com. No frameworks, no JS,
+   nothing fancier than what a browser gives you for free.
+   ------------------------------------------------------------- */
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    max-width: 46em;
+    margin: 0 auto;
+    padding: 1.5em 1em 3em 1em;
+}
+
+a:link    { color: #0000ee; text-decoration: underline; }
+a:visited { color: #551a8b; text-decoration: underline; }
+a:hover   { color: #cc0000; }
+a:active  { color: #ff0000; }
+
+hr {
+    border: none;
+    border-top: 1px solid #888888;
+    margin: 1.4em 0;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h1.no-header, .site-title {
+    font-size: 1.8em;
+    margin: 0.2em 0 0.1em 0;
+}
+
+.tagline {
+    font-style: italic;
+    color: #444444;
+    margin: 0 0 1em 0;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0.15em;
+}
+
+/* top navigation, e.g.  About | Software | Writing | Contact */
+.nav {
+    margin: 0.8em 0;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+    margin-right: 0.3em;
+}
+
+.nav li:not(:last-child)::after {
+    content: " \00b7";  /* middle-dot separator, ascii-safe fallback below */
+    color: #888888;
+    margin-left: 0.3em;
+}
+
+/* small-caps treatment for project / program names, as on
+   invisible-island.net */
+.proj-name, .small-caps {
+    font-variant: small-caps;
+    font-style: normal;
+}
+
+/* project / software listing */
+dl.projects dt {
+    font-weight: bold;
+    margin-top: 0.9em;
+}
+
+dl.projects dt a {
+    font-variant: small-caps;
+}
+
+dl.projects dd {
+    margin: 0.15em 0 0 0;
+    color: #222222;
+}
+
+ul.plain, ol.plain {
+    padding-left: 1.4em;
+}
+
+ul.links li {
+    margin: 0.25em 0;
+}
+
+.byline, .updated {
+    color: #666666;
+    font-size: 0.9em;
+}
+
+footer {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid #888888;
+    color: #555555;
+    font-size: 0.85em;
+}
+
+code, pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95em;
+}
+
+pre {
+    background: #f5f5f5;
+    border: 1px solid #dddddd;
+    padding: 0.7em;
+    overflow-x: auto;
+}
+
+blockquote {
+    margin: 1em 1.5em;
+    color: #333333;
+    border-left: 2px solid #cccccc;
+    padding-left: 1em;
+}
+
+img.headshot {
+    float: left;
+    margin: 0 1.2em 0.5em 0;
+    border: 1px solid #cccccc;
+}
+
+.clear { clear: both; }
+
+@media (max-width: 40em) {
+    .page { padding: 1em 0.8em 2em 0.8em; }
+    img.headshot { float: none; display: block; margin: 0 0 1em 0; }
+}
