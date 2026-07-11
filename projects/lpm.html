@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LPM &mdash; software</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="project-two, by Shreyaan Misra.">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<div class="page">
+
+  <p class="byline"><a href="../index.html">http://elderfl0wer.me/</a><br>
+  Copyright &copy; 2020&ndash;2026 by Shreyaan Misra</p>
+
+  <hr>
+
+  <!-- TODO: rename to the real project name throughout this file -->
+  <h1 class="site-title proj-name">LPM</h1>
+  <p class="tagline">A lightweight password manager for the command line.</p>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../software.html">Software</a></li>
+      <li><a href="../writing.html">Writing</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <h2 id="synopsis">Synopsis</h2>
+
+  <!-- TODO: what it is, in a couple of sentences -->
+  <p>
+  LPM allows you to manage your passwords via terminal and encrypts
+  them using <a href="https://github.com/jedisct1/libsodium">Libsodium</a>
+  & uses an identity system to keep track of passwords.
+
+  </p>
+
+  <h2 id="history">History</h2>
+
+  <!-- TODO: why you built it / how it came about -->
+  <p>
+  Quite literally stands for "Lightweight Password Manager", months before the project began I had discovered
+  Libsodium and was mostly intrigued by its <a href="https://doc.libsodium.org/doc/generating_random_data" target="_blank">
+  randombytes API</a> so I wanted to use it for months but never actually
+  got around to it.
+  </p>
+
+  <p>
+  The philosophy is that a password is something that can be remembered by a human being i.e. not being hash-like,
+  but to make a strong password it  has to be complex hence becoming hard to remember. LPM circumvents that by allowing
+  you to have complex passwords for logins you wish while only having to memorize passwords to your "identities".
+  </p>
+
+  <p>
+  The identity system of LPM works to save your passwords into seperate storage units that are identified via an 
+  "identity name" & optionally an EMAIL and/or Phone No. which has a password associated with it which needs to 
+  be verified by LPM to add, search or extract a password from that Identity.
+  </p>
+  <p>
+    Furthermore, each identity EACH have their own password and allows clean seperation between the types of passwords saved
+    for example you can have your personal logins under an identity with your name associated with your personal EMAIL
+    & number while another one for work associated with a work email & number each having different passwords and do not
+    interact with each other I.E. the login for work will not show up if querying the personal identity as they are stored
+    in different encrypted files & under different passwords i.e. they cannot affect each other.
+  </p>
+  <p>
+    This also means you own more of your data, since the passwords are not stored in some cloud but rather in encrypted storage
+    units on your machine, you are not vulnerable to data leaks or privacy invasion as YOU OWN YOUR DATA by keeping it on your
+    machine.
+  </p>
+
+  <h2 id="source">Source</h2>
+
+  <ul class="plain">
+    <li><a href="https://github.com/elderfl0wer/lpm">github.com/elderfl0wer/lpm/</a></li>
+  </ul>
+
+  <footer>
+    <p>Last updated: <span class="updated">12 July 2026</span>. Part of the
+    <a href="../software.html">software</a> listing.</p>
+  </footer>
+
+</div>
+</body>
+</html>

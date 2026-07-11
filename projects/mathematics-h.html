@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mathematics.h &mdash; software</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="mathematics.h: a single-header mathematics library without any dependencies, by Shreyaan Misra.">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<div class="page">
+
+  <p class="byline"><a href="../index.html">http://elderfl0wer.me/</a><br>
+  Copyright &copy; 2020&ndash;2026 by Shreyaan Misra</p>
+
+  <hr>
+
+  <h1 class="site-title proj-name">mathematics.h</h1>
+  <p class="tagline">single-header mathematics library without any dependencies</p>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../software.html">Software</a></li>
+      <li><a href="../writing.html">Writing</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <h2 id="synopsis">Synopsis</h2>
+
+  <!-- TODO: replace with the real synopsis for this project -->
+  <p>
+  <span class="proj-name">mathematics.h</span> is a single-header C
+  library covering the math I kept re-implementing across small
+  projects &mdash; vectors, matrices, and the usual scalar helpers
+  &mdash; without pulling in a dependency for it. Drop the header
+  in, define the implementation macro in one translation unit, and
+  it's available everywhere else as declarations only.
+  </p>
+
+  <h2 id="history">History</h2>
+
+  <!-- TODO: replace with the real backstory -->
+  <p>
+  Started as a handful of vector/matrix helpers copy-pasted between
+  projects until keeping them in sync got tedious. Rewritten as a
+  proper single-header library so it could be dropped into new
+  projects with one <code>#include</code>.
+  </p>
+
+  <h2 id="usage">Usage</h2>
+
+  <!-- TODO: replace with real usage notes / example -->
+  <pre>#define MATHEMATICS_H_IMPLEMENTATION
+#include "mathematics.h"
+
+int main(void) {
+    vec3 a = { 1.0f, 2.0f, 3.0f };
+    vec3 b = { 4.0f, 5.0f, 6.0f };
+    vec3 c = vec3_add(a, b);
+    return 0;
+}</pre>
+
+  <h2 id="source">Source</h2>
+
+  <ul class="plain">
+    <li><a href="https://github.com/elderfl0wer/mathematics.h/">github.com/elderfl0wer/mathematics.h</a></li>
+  </ul>
+
+  <p>
+  See the repository for the license, build instructions, and full
+  API reference.
+  </p>
+
+  <footer>
+    <p>Last updated: <span class="updated">12 July 2026</span>. Part of the
+    <a href="../software.html">software</a> listing.</p>
+  </footer>
+
+</div>
+</body>
+</html>
