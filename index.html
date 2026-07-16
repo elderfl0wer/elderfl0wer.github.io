@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    const ws new WebSocket('ws://localhost:1337');
+    ws.onmessage = () => location.reload();
+</script>
 <body>
 <div id="page">
 
@@ -14,17 +18,20 @@
     <a href="software.html">software</a>
     <a href="writings.html">writings</a>
     <a href="miscellany.html">music &amp; books</a>
+    <a href="extra.html">extra</a>
+
+    
   </nav>
 
   <h1>Shreyaan Misra</h1>
   <p class="tagline">wannabe systems programmer</p>
+  <p class="tagline">(College Student & Idiot)</p>
+  
 
   <h2>About</h2>
   <p>
-    This is where you introduce yourself. Two or three sentences is
-    plenty &mdash; who you are, what you spend your time on, and
-    anything you want a visitor to know up front. Keep it plain; this
-    page is meant to read like a short letter, not a pitch.
+  I write software, mostly in <a href="https://www.c-language.org/">C</a>
+  based usually on my needs, I listen to a lot of music
   </p>
   <p>
     A second paragraph can go here if you want to mention background,
@@ -33,14 +40,16 @@
 
   <h2>Elsewhere</h2>
   <ul>
-    <li><a href="mailto:you@example.com">email</a></li>
-    <li><a href="https://github.com/yourname">github</a></li>
-    <li><a href="https://twitter.com/yourname">twitter / x</a></li>
+    <li><a href="mailto:shreyaanmisra0@gmail.com">email</a></li>
+    <li><a href="https://github.com/elderfl0wer/">github</a></li>
+    <li><a href="https://twitter.com/elderfl0werWK/">twitter / x</a></li>
   </ul>
 
   <footer>
-    Last updated July 2026.
+    Last updated 16 July 2026.
   </footer>
+  <br>
+  <img src="https://www.vim.org/images/just_vim_it_animated_click.gif" align="center">
 
 </div>
 </body>
