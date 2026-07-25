@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>about</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+    const ws new WebSocket('ws://localhost:1337');
+    ws.onmessage = () => location.reload();
+</script>
+<body>
+<div id="page">
+
+  <nav id="sitenav">
+    <a class="current" href="index.html">about</a>
+    <a href="software.html">software</a>
+    <a href="writings.html">writings</a>
+    <a href="miscellany.html">music &amp; books</a>
+    <a href="extra.html">extra</a> 
+  </nav>
+  <p> UNDER CONSTRUCTION!!!</p>
+
+
+</div>
+</body>
+</html>
