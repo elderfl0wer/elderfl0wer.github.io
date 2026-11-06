@@ -1,0 +1,198 @@
+/* -------------------------------------------------------------
+   style.css
+   Kept deliberately plain — no frameworks, no build step.
+   Edit colors/fonts here and it applies to every page.
+------------------------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 15px;
+    color: #111111;
+    background-color: #1c261c;
+}
+
+/* background photo lives on a fixed pseudo-element instead of
+   background-attachment: fixed — same look, but scrolling stays
+   smooth (no full-page repaints, esp. on mobile) */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: #1c261c;
+    background-image: url("../img/wavemaxxed.jpg");
+    background-image: image-set(url("../img/wavemaxxed.webp") type("image/webp"), url("../img/wavemaxxed.jpg") type("image/jpeg"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+}
+
+/* the whole page sits in one narrow column, like a plain text
+   document, on top of a translucent paper-colored panel so it
+   stays readable over the photo */
+#page {
+    max-width: 576px;
+    margin: 44px auto 86px auto;
+    padding: 29px 36px;
+    background-color: rgba(255, 255, 253, 0.88);
+    border: 1px solid #999999;
+}
+
+h1 {
+    font-size: 21px;
+    margin: 0 0 4px 0;
+}
+
+h2 {
+    font-size: 17px;
+    margin: 25px 0 7px 0;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 2px;
+}
+
+p, li {
+    line-height: 1.5;
+}
+
+/* safety net: no image should ever be wider than its container,
+   anywhere on the site */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tagline {
+    margin: 0 0 20px 0;
+    font-style: italic;
+    color: #333333;
+}
+
+/* top navigation: a plain row of links, underlined like it's 1999 */
+nav#sitenav {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #999999;
+}
+
+nav#sitenav a {
+    margin-right: 14px;
+}
+
+nav#sitenav a.current {
+    color: #111111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #999999;
+    margin: 28px 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+.entry {
+    margin-bottom: 18px;
+}
+
+.entry .meta {
+    color: #555555;
+    font-size: 12.5px;
+}
+
+footer {
+    margin-top: 36px;
+    padding-top: 9px;
+    border-top: 1px solid #999999;
+    font-size: 11.5px;
+    color: #555555;
+}
+
+/* -------------------------------------------------------------
+   writing / post pages (writing/*.html)
+   imgur-style: image-heavy, with code snippets, but kept inside
+   the same plain narrow-column look as the rest of the site
+------------------------------------------------------------- */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 12.5px;
+}
+
+.post-header .meta {
+    color: #555555;
+    font-size: 12.5px;
+    margin: 0 0 21px 0;
+}
+
+.post img,
+.post figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #999999;
+}
+
+.post figure {
+    margin: 20px 0;
+}
+
+.post figcaption {
+    text-align: center;
+    font-size: 11.5px;
+    font-style: italic;
+    color: #555555;
+    margin-top: 6px;
+}
+
+.post pre {
+    background-color: #1c261c;
+    color: #e8e8e3;
+    padding: 13px 15px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 18px 0;
+    border: 1px solid #999999;
+}
+
+.post pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+}
+
+.post code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 1px 4px;
+    font-size: 13.5px;
+    border: 1px solid #cccccc;
+}
+
+.post blockquote {
+    margin: 20px 0;
+    padding: 4px 16px;
+    border-left: 3px solid #999999;
+    color: #333333;
+    font-style: italic;
+}
